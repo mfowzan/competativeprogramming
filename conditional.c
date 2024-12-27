@@ -11,7 +11,7 @@ int main(void)
     printf("Enter the 3 numbers\n");
     scanf("%d%d%d",&a,&b,&c);
     r=large(large(a,b),c);
-    printf("largest number is%d",r);
+    printf("largest number is %d",r);
 
 
     return 0;

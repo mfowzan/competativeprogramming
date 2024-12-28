@@ -2,7 +2,7 @@
 
 void removeduplicates(int arr[],int length);
 int isinarray(int array[],int key);
-int length;
+int length; //global varibale
 int main(void)
 {
     int arr[]={3,3,4,5,3,5,2,2,1,6,7,8,1,9};
@@ -24,6 +24,7 @@ int main(void)
 
 }
 
+//Function to remove duplicates by creating a new array and storing unique elements there
 void removeduplicates(int arr[],int len)
 {
     int temp[length];
@@ -57,6 +58,8 @@ void removeduplicates(int arr[],int len)
     }
 }
 
+
+// Function to check whether an element is present in an array or not
 int isinarray(int array[],int key)
 {
     for (int i=0;i<length;i++)

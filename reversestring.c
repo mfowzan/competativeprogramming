@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<string.h>
 
-
+// Used two pointer method to solve
 int main(void)
 {
     char str[]="fowzan";

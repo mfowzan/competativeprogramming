@@ -4,8 +4,8 @@
 int anagram(char str1[],char str2[],int n);
 int main(void)
 {
-    char str1[]="silent";
-    char str2[]="listen";
+    char str1[]="aac";
+    char str2[]="bba";
     int n=strlen(str1);
     if (anagram(str1,str2,n))
     {
@@ -19,24 +19,23 @@ int main(void)
 int anagram(char str1[],char str2[],int n)
 {
     
-    int arr1[n];
-    int arr2[n];
-    int sum1,sum2=0;
+    int count[26]={0};
+    
     
     for(int i=0;i<n;i++)
     {
-        arr1[i]=str1[i];
-        sum1+=arr1[i];
-       
         
-        arr2[i]=str2[i];
-        sum2+=arr2[i];
+        count[str1[i]-97]++;
+        count[str2[i]-97]--;
        
 
     }
-    if (sum1==sum2)
+    for (int i=0;i<26;i++)
+    {
+        if(count[i]!=0)
+        printf("%d\n",count[i]);
+        return 0;
+    }
     return 1;
-    else
-    return 0;
 
 }

@@ -21,17 +21,11 @@ void frequency(char str[])
     for (int i=0;i<l;i++)
     {
         asci=str[i];
-        printf("%d\n",asci);
-        printf("%c\n",asci);
+        
         count[asci-97]++;
     }
 
-    for (int k=0;k<26;k++)
-    {
-        printf("%c : %d\n",k+97,count[k]);
-        
-    }
-    printf("\n\n");
+ 
 
     for (int j=0;j<26;j++)
     {

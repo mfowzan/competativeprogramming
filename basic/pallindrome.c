@@ -1,5 +1,6 @@
 #include<stdio.h>
 #include<string.h>
+#include<ctype.h>
 
 
 int ispallindrome(char str[]);
@@ -23,18 +24,26 @@ int main(int argc, char* argv[])
 
 int ispallindrome(char str[])
 {
-    int l=strlen(str)-1;
-    int i=0;
-    while(i<l)
+    int l=strlen(str);
+    int left=0;
+    int right=l-1;
+    while(left<right)
     {
-        if (str[i]!=str[l])
-        return 0;
-        else
+        if (isalnum(str[left] && isalnum(str[right])))
         {
-            i++;
-            l--;
-
+            char leftchar = tolower(str[left]);
+            char rightchar = tolower(str[right]);
+            if (leftchar!=rightchar)
+            {
+                return 0;
+            }
+            left++;
+            right--;
         }
+
+        if (!isalnum(str[left])) left++;
+        if (isalnum(str[right])) right--;
+        
     }
     return 1;
 }

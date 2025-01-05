@@ -6,8 +6,9 @@ int validpallindrome(char str[]);
 
 int main(void)
 {
+    //fgets keeps last element as \n beacsue when we press enter, it keeps the newline character in the string as well, the last charcter of the string will be \n
     char str[100]="A man, a plan, a canal: Panama";
-    //fgets(str,100,stdin);;
+    //fgets(str,100,stdin);
     
     if (validpallindrome(str)) printf("pallindrome");
     else printf("not pallindrome");

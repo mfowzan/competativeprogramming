@@ -1,6 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
-
+//in c you can return the pointer, not the whole array, the pointer pointing to the first element
 int* twoSum(int* nums, int numsSize, int target ) 
 
 {
